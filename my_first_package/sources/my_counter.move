@@ -1,9 +1,11 @@
+#[allow(duplicate_alias)]
+
 module my_counter::counter {
     use sui::object::{Self, UID};
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
 
-    struct Counter has key {
+   public  struct Counter has key {
         id: UID,
         value: u64,
     }
